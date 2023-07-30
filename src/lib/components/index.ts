@@ -1,2 +1,2 @@
-export { default as Nav } from "./nav.svelte";
+// export { default as Nav } from "../common/nav.svelte";
 

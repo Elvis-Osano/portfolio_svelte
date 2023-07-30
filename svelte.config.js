@@ -19,6 +19,8 @@ const config = {
 			$components:"src/lib/components",
 			$helpers:"src/helpers",
 			$framework:"src/lib/framework",
+			$utility:"src/utility",
+			$common:"src/lib/common",
 		},
 		files:{
 			appTemplate:"src/app/app.html"
