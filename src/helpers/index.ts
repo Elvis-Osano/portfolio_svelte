@@ -1,28 +1,33 @@
-export const links = [    
-    {
-    href:"/about",
-    text:"About"
-  },
-    {
-    href:"/work",
-    text:"Work"
-  },
-    {
-    href:"/lab",
-    text:"Lab"
-  },
-    {
-    href:"/blog",
-    text:"Blog"
-  },
-    {
-    href:"/jobs",
-    text:"Jobs"
-  }
-  ,
-    {
-    href:"/contact",
-    text:"Contact"
-  }
-  
-  ];
+export const links = [
+	{
+		href: '/',
+		text: 'Home'
+	},
+	{
+		href: '#service',
+		text: 'Service'
+	},
+	{
+		href: '#projects',
+		text: 'Projects'
+	}
+];
+export let contrib: string[] = [
+	'hello',
+
+	'UX Design',
+
+	'Responsive Web Development',
+
+	'Software Application Architecture',
+
+	'User Research',
+
+	'OEM Software Development',
+
+	'Information Architecture',
+
+	'Quality Assurance',
+
+	'UI Design'
+];

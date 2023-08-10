@@ -1,7 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-   @apply text-black bg-[aliceblue];
+@font-face {
+	font-family: 'sirenia';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/Floodfonts - Sirenia Regular.otf'); /* IE9 Compat Modes */
+}
+@font-face {
+	font-family: 'verdana';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/verdana/verdana.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+	font-family: 'mont';
+	font-style: normal;
 
+	src: url('/fonts/mont.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+	font-family: 'circular';
+	font-style: normal;
+	src: url('/fonts/circular.woff2'); /* IE9 Compat Modes */
+}
+
+/* custom css */
+.center {
+	@apply grid place-items-center;
+}
+.col {
+	@apply flex flex-col gap-2 justify-center;
 }

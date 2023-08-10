@@ -1,1 +1,1 @@
-export { default as Media } from "./mediaQuery.svelte";
+export { default as Media } from './mediaQuery.svelte';

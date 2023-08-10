@@ -1,0 +1,84 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
+	import { CSSRulePlugin } from 'gsap/dist/CSSRulePlugin';
+	import { Flip } from 'gsap/dist/Flip';
+	onMount(() => {
+		gsap.registerPlugin(CSSRulePlugin, Flip);
+		var rule = CSSRulePlugin.getRule('.name:after');
+		// Select the SVG element
+		const logo = document.querySelector('.logo') as HTMLDivElement;
+		const svg = document.querySelector('.svg') as HTMLCanvasElement;
+		const content = document.querySelector('.content');
+		const loader = document.querySelector('.loader');
+		const head = document.querySelector('.col');
+		const name = document.querySelector('.cr');
+		const final = document.getElementById('navlogo') as HTMLDivElement;
+		const state = Flip.getState(svg);
+
+		// Create a GSAP timeline
+		const tl = gsap.timeline({
+			defaults: {
+				ease: 'power2.out',
+				duration: 0.8
+			}
+		});
+
+		//second tl
+		const tl2 = gsap.timeline({ defaults: { duration: 1, ease: 'power2.out' }, delay: 0.5 });
+		tl2.to([logo, name, head], {
+			opacity: 0,
+
+			stagger: 0.3
+		})
+			.to(loader, { yPercent: -100, display: 'none' }, 0)
+			.from(content, { y: 150, delay: 0.5 }, 0);
+
+		// Set initial values
+
+		// Add animation to the timeline
+		tl.to('.cls-2', { fill: '#D6AD60', stagger: 0.2 })
+			.from('.name-wrapper', { y: 50, ease: 'ease' })
+			.to('.name', { letterSpacing: '3px' });
+
+		const master = gsap.timeline();
+
+		master.add(tl).add(tl2);
+	});
+</script>
+
+<section class="h-screen loader">
+	<div class="col items-center overflow-hidden w-4/6 mx-auto h-full">
+		<div class="logo h-24 w-24">
+			<svg viewBox="0 0 563.39 584.02" class="h-full w-full svg relative z-30">
+				<path
+					class="cls-1"
+					id="outer"
+					d="m371.96,166.83h0l-.05-.03.05.03Zm92.04,130.59c-7.83-55.55-42.8-103.1-92.04-130.59l.92.26-.97-.29c-8.35-4.66-17.11-8.74-26.22-12.19-8.1-3.07-16.48-5.63-25.08-7.65-12.11,2.33-21.21,12.37-21.21,24.39,0,8.44,4.48,15.89,11.34,20.4,5.03,1.25,9.95,2.76,14.75,4.5,45.86,16.63,80.29,54.76,89.15,101.17h-131.82s-.28,0-.28,0c-12.82,0-23.21,10.79-23.21,24.09s10.39,24.09,23.21,24.09h181.34c1.17-8.01,1.77-16.19,1.77-24.51s-.57-15.93-1.65-23.68Zm-84.62,170.99c-44.17,27.62-100.35,37.96-155.68,24.08-101.93-25.56-162.45-123.66-135.13-219.06,15.43-53.88,55.58-95.4,105.97-116.72,9.42-3.99,19.19-7.27,29.23-9.79.1.02.19.05.28.07,14.77,3.7,23.54,17.92,19.59,31.75-1.52,5.33-4.72,9.82-8.92,13.12-6.22,1.65-12.31,3.68-18.21,6.1-38.23,15.61-68.8,46.77-80.43,87.4-20.28,70.85,24.65,143.69,100.35,162.67,39.88,10,80.36,3.06,112.7-16.11,7.16-4.25,13.93-9.1,20.2-14.49,3.88-.65,7.97-.54,12.03.48,14.77,3.7,23.54,17.92,19.59,31.75-.46,1.62-1.08,3.16-1.83,4.61-6.25,5.12-12.85,9.85-19.73,14.15Z"
+				/>
+				<path
+					class="cls-1"
+					d="m475.49,422.6c6.8-5.39,16.16-7.66,25.36-5.32,13.93,3.55,22.61,16.42,20.59,29.64-3.5,6.08-7.24,12-11.19,17.74-63.9,92.75-185.47,140.56-304.34,110.31C57.78,537.28-30.17,392.63,9.53,251.96c23.45-83.11,86.22-146.27,164.21-176.27,5.82-2.24,11.73-4.3,17.71-6.16,2.49-.02,5.02.27,7.55.92,15.02,3.82,23.94,18.49,19.91,32.76-1.46,5.19-4.44,9.62-8.36,12.96-6.7,2-13.28,4.29-19.73,6.86-62.01,24.71-111.75,75.42-130.49,141.86-32.17,114.04,39.11,231.29,159.19,261.84,96.22,24.48,194.61-14.11,246.47-89.07,3.37-4.87,6.54-9.89,9.5-15.06"
+				/>
+				<polygon
+					class="cls-2"
+					points="468.62 92.35 496.69 101.75 471.38 118.52 470.19 148.38 447.18 130.07 418.38 139.13 429.46 111.04 412.85 86.78 442.71 87.73 461.25 63.68 468.62 92.35"
+				/>
+				<polygon
+					class="cls-2"
+					points="357.88 29.29 362.13 0 383.14 21.92 412.73 17.78 398.82 43.68 412.85 70.41 383.24 64.5 362.32 85.16 357.94 55.61 330.98 41.65 357.88 29.29"
+				/>
+				<polygon
+					class="cls-2"
+					points="537.19 176.4 563.39 190.18 535.72 202.68 529.75 231.95 509.98 210.2 480.09 214.51 495.54 188.57 483.04 161.96 512.36 167.68 534.51 146.92 537.19 176.4"
+				/>
+			</svg>
+		</div>
+
+		<div class="h-10 overflow-hidden c">
+			<div class="font-sirenia font-bold text-xl name-wrapper h-10 overflow-hidden">
+				<span class="name">Elvis</span> <span class="name">Osano</span>
+			</div>
+		</div>
+	</div>
+</section>

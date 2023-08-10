@@ -5,11 +5,11 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
-			url: string
+			url: string;
 		}
 
 		// interface Platform {}
 	}
 }
 
-export { };
+export {};
