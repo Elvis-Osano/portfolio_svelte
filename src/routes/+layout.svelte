@@ -16,14 +16,12 @@
 
 	let ready = false;
 	onMount(() => {
-		setTimeout(() => {
-			ready = true;
-		}, 3000);
+		ready = true;
 	});
 </script>
 
 {#if ready}
-	<!-- content here -->
+	<!-- <Loader /> -->
 	<main class="relative" id="viewport">
 		<section class="content">
 			<Nav />

@@ -3,14 +3,6 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		gsap.from('#my-title', {
-			x: 80,
-			opacity: 0,
-			duration: 1.4,
-			ease: 'power3.inOut'
-		});
-		gsap.to('.mask', { x: '-100%', duration: 1.4, ease: 'power3.inOut', delay: 0.2 });
-		gsap.from('.slide', { width: '60%', duration: 1.4, ease: 'power3.inOut' });
 		wobbleimg();
 	});
 	function wobbleimg() {
@@ -61,7 +53,8 @@
 					>Contact</button
 				>
 			</div>
-			<button
+			<a
+				href="/projects"
 				class="flex gap-2 items-center cursor-pointer absolute bottom-4 lg:w-3/6 w-11/12"
 			>
 				<span class="h-0.5 w-12 rounded-full bg-[#e5e7eb] slide" />
@@ -92,7 +85,7 @@
 						stroke-linecap="square"
 					/></svg
 				>
-			</button>
+			</a>
 		</div>
 
 		<div class="hidden sm:block w-2/5 h-full lg:flex items-center">

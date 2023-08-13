@@ -8,7 +8,7 @@ export const links = [
 		text: 'Service'
 	},
 	{
-		href: '#projects',
+		href: '/projects',
 		text: 'Projects'
 	}
 ];

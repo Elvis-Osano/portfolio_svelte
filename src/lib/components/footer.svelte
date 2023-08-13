@@ -2,9 +2,9 @@
 	import Icon from '$common/icon.svelte';
 </script>
 
-<section class="  w-full mt-10">
+<section class="  w-full">
 	<div
-		class="border-t border-grey lg:py-5 py-4 flex items-center justify-between lg:w-11/12 w-full mx-auto lg:px-0 px-3"
+		class="border-t-[1px] border-[#242424] lg:py-5 py-4 flex items-center justify-between lg:w-11/12 w-full mx-auto lg:px-0 px-3"
 	>
 		<span class="text-grey text-xs capitalize">2023 &copy; All rights Reserved</span>
 		<span class="flex items-center gap-2">

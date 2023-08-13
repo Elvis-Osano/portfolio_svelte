@@ -29,7 +29,7 @@
 	];
 </script>
 
-<section class="bg-transparent py-14 flex flex-col gap-20" id="service">
+<section class="bg-transparent py-14 lg:h-[80vh] h-screen flex flex-col gap-20" id="service">
 	<h1 class="head text-3xl font-outfit text-center lg:w-3/6 w-11/12 mx-auto">
 		Collaborate with brands and agencies to create impactful results.
 	</h1>
@@ -39,7 +39,7 @@
 				<img src="images/{step.icon}.svg" alt="" srcset="" class="w-10 h-full grayscale" />
 
 				<small>{index + 1}</small>
-				<h2 class="font-bold font-sirenia text-2xl head">{step.title}</h2>
+				<h2 class="font-bold font-outfit text-xl head">{step.title}</h2>
 				<p class="text-grey font-light text-sm font-outfit">{step.desc}</p>
 			</div>
 		{/each}
