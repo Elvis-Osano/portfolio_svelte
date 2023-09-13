@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 </script>
 
 <div class="overlay w-full grid place-items-center h-screen">
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-4 items-center">
 		<svg
 			id="load-logo"
 			data-name="Layer 1"

@@ -36,7 +36,7 @@
 	<div class="grid lg:grid-cols-4 grid-cols-2 gap-4 lg:w-5/6 w-11/12 mx-auto">
 		{#each steps as step, index}
 			<div class="flex flex-col gap-2">
-				<img src="images/{step.icon}.svg" alt="" srcset="" class="w-10 h-full grayscale" />
+				<img src="/images/{step.icon}.svg" alt="" srcset="" class="w-10 h-full grayscale" />
 
 				<small>{index + 1}</small>
 				<h2 class="font-bold font-outfit text-xl head">{step.title}</h2>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '$common/icon.svelte';
 </script>
 
 <section
@@ -12,9 +13,10 @@
 		</h1>
 
 		<a
-			href="/case/police"
-			class="border border-[#242424] hover:scale-90 transition-all relative z-30 bg-[#1A1A1A] w-max text-sm text-grey font-outfit py-4 px-8"
-			>Get in touch</a
-		>
+			href="mailto:elvoosano7@gmail.com"
+			class="flex gap-2 items-center border border-[#242424] hover:scale-90 transition-all relative z-30 bg-[#1A1A1A] w-max text-sm text-grey font-outfit py-4 px-8"
+			>Get in touch
+			<Icon name={'mdi-light:email'} />
+		</a>
 	</div>
 </section>

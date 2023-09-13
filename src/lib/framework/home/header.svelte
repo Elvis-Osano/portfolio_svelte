@@ -1,28 +1,4 @@
 <script lang="ts">
-	import { gsap } from 'gsap/dist/gsap';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		wobbleimg();
-	});
-	function wobbleimg() {
-		document.querySelector('header')?.addEventListener('mousemove', (e) => {
-			const { offsetX, offsetY, target } = e;
-			const { clientWidth, clientHeight } = target as HTMLDivElement;
-			const xPos = offsetX / clientWidth - 0.5;
-			const yPos = offsetY / clientHeight - 0.5;
-
-			const robot = document.getElementById('me');
-
-			gsap.to(robot, {
-				duration: 1.2,
-				x: xPos * 10,
-				y: yPos * 10,
-				rotateX: xPos * 10,
-				rotateY: yPos * 10
-			});
-		});
-	}
 </script>
 
 <!-- //Loop Scrolling -->
@@ -48,9 +24,11 @@
 					<h4 class=" font-outfit text-grey text-sm">Developer • Techie • Consultant</h4>
 				</div>
 
-				<button
+				<a
+					target="_blank"
+					href="mailto:elvoosano7@gmail.com"
 					class="rounded-full w-max border border-brown px-3 ml-3 text-sm py-1 text-whitney cursor-pointer"
-					>Contact</button
+					>Contact</a
 				>
 			</div>
 			<a
@@ -90,7 +68,7 @@
 
 		<div class="hidden sm:block w-2/5 h-full lg:flex items-center">
 			<div class="relative overflow-hidden p-3">
-				<img src="images/me4.png" alt="me" srcset="" class="w-72" id="me" />
+				<img src="/images/me4.png" alt="me" srcset="" class="w-72" id="me" />
 				<div class="absolute inset-0 bg-dark mask" />
 			</div>
 		</div>

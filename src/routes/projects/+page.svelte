@@ -1,15 +1,13 @@
 <script lang="ts">
-	import { gsap } from 'gsap/dist/gsap';
-	import { Flip } from 'gsap/dist/Flip';
+	import CaseCard from '$components/caseCard.svelte';
+	import { projectsData } from '$helpers';
 	import { onMount } from 'svelte';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import Scrollbar from 'smooth-scrollbar';
-	import { CaseOne, CaseThree, CaseTwo } from '$home';
+	import { gsap } from 'gsap/dist/gsap';
 
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		parallax();
-		smoothScroll();
 	});
 	function parallax() {
 		gsap.utils.toArray<HTMLDivElement>('.parallx').forEach((section) => {
@@ -25,38 +23,13 @@
 			});
 		});
 	}
-	function smoothScroll() {
-		const main = document.querySelector('#viewport') as HTMLElement;
-
-		let bodyScrollBar = Scrollbar.init(main, {
-			damping: 0.07,
-			thumbMinSize: 10,
-			alwaysShowTracks: false
-		});
-
-		bodyScrollBar.track.xAxis.element.remove();
-		ScrollTrigger.scrollerProxy(document.body, {
-			scrollTop(value) {
-				if (arguments.length) {
-					bodyScrollBar.scrollTop = value as number; // setter
-				}
-
-				return bodyScrollBar.scrollTop; // getter
-			}
-		});
-		bodyScrollBar.addListener(ScrollTrigger.update);
-	}
 </script>
 
 <svelte:head>
-	<title>Projects -Elvi Osano</title>
+	<title>Projects -Elvis Osano</title>
 </svelte:head>
-<CaseOne />
-<CaseThree />
-<CaseTwo />
-<CaseOne />
-<CaseThree />
-<CaseTwo />
-<CaseOne />
-<CaseThree />
-<CaseTwo />
+<section class="pt-20">
+	{#each projectsData as item, index}
+		<CaseCard {index} data={item} />
+	{/each}
+</section>

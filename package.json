@@ -30,7 +30,7 @@
 		"gsap": "^3.12.2",
 		"iconify-icon": "^1.0.8",
 		"modern-normalize": "^1.1.0",
-		"smooth-scrollbar": "^8.8.4",
-		"split-type": "^0.3.3"
+		"smooth-scrollbar": "^8.8.4"
+		
 	}
 }

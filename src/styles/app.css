@@ -3,3 +3,115 @@
 @tailwind utilities;
 
 
+body {
+	color: #f0f8ff;
+	background-color: #161616;
+  background-image: url('/images/bg.svg');
+	font-family: 'Roboto', sans-serif;
+	background-repeat: no-repeat;
+	@apply lg:bg-fixed lg:bg-cover relative;
+
+}
+.mask{
+  background-image: url('/images/bg.svg');
+}
+
+.header{
+    perspective:1000px ;
+  }
+.head {
+	background: linear-gradient(97.13deg, #e9e9e9 0%, #515151 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+/* element classnames and tags  */
+
+.cls-1 {
+	fill: #fff;
+}
+
+.cls-1,
+.cls-2 {
+	fill-rule: evenodd;
+}
+
+.cls-2 {
+  animation: animName 2s ease-in-out infinite;
+  fill: #C3773D;
+
+}
+#load-logo {
+  height: 75px;
+  width: 75px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: draw 5s ease;
+}
+
+
+#me {
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+	filter: drop-shadow(0px 5px 5px #d6ad60) grayscale();
+	/* filter: ; */
+}
+
+
+
+  .socials a {
+    
+  overflow: hidden;
+    position: relative;
+  
+    
+  }
+  .socials a:after {
+    display: block;
+    content: '';
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateX(-101%);
+  }
+  .socials a:hover::after {
+    transition: transform 0.3s cubic-bezier(0.5, 0.7, 0.4, 1);
+    transform: translateX(0);
+  }
+  .socials a.animate-out::after {
+    transition: transform 0.3s cubic-bezier(0.5, 0.7, 0.4, 1);
+    transform: translateX(100%);
+  }
+  #viewport{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 4500;
+      fill-opacity: 0;
+    }
+    75%{
+      fill-opacity: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      fill-opacity: 1;
+    }
+  }
+ 
